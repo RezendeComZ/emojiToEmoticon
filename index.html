@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emoji to Emoticon</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-group">
+      <textarea class="form-control" id="emoji" rows="4" cols="50">😇</textarea>
+      <br>
+      <button class="btn-primary" onclick="mostraConteudo()">Convert</button>
+    </div>
+    <h2>Text:</h2>
+    <div id="result">
+
+    </div>
+    <h2>MSN emoticon:</h2>
+    <div id="resultEmoticon">
+
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <!-- Script emoji -->
+  <script src="emoji.js"></script>
+  <script src="./node_modules/grapheme-splitter/index.js"></script>
+</body>
+
+</html>
