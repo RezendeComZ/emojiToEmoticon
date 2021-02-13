@@ -2,18 +2,20 @@
 // Option to put a space between emoticons texts
 // Verificar se está rodando no domínio certo
 
+const path = "./emoticons/";
+
 const emoticons = {
   angel: {
     txt: "(a)",
-    img: "./emoticon/faces/angel_smile.gif"
+    img: `${path}faces/angel_smile.gif`
   },
   happy: {
     txt: ":)",
-    img: "./emoticon/faces/regular_smile.gif"
+    img: `${path}faces/regular_smile.gif`
   },
   teethSmile: {
     txt: ":-D",
-    img: "./emoticon/faces/teeth_smile.gif"
+    img: `${path}faces/teeth_smile.gif`
   }
 }
 
