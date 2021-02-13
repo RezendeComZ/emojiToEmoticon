@@ -6,18 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Emoji to Emoticon</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 </head>
 
 <body>
   <div class="container">
-    <div class="form-group">
+    <div class="form-group mt-4">
       <textarea class="form-control" id="emoji" rows="4" cols="50">😇</textarea>
       <br>
       <button class="btn-primary" onclick="mostraConteudo()">Convert</button>
     </div>
     <h2>Text:</h2>
-    <div id="result">
+    <div id="resultText">
 
     </div>
     <h2>MSN emoticon:</h2>
@@ -32,8 +33,8 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
   <!-- Script emoji -->
-  <script src="emoji.js"></script>
-  <script src="./node_modules/grapheme-splitter/index.js"></script>
+  <script src="./grapheme-splitter.js"></script>
+  <script src="./emoji.js"></script>
 </body>
 
 </html>
