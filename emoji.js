@@ -1,6 +1,5 @@
 // Copy button
 // Option to put a space between emoticons texts
-// Verificar se está rodando no domínio certo
 
 const path = "./emoticons/";
 
@@ -19,7 +18,7 @@ const emoticons = {
   }
 }
 
-const listaEmoji = {
+const emojiList = {
   '😇': emoticons.angel,
   '🙂': emoticons.happy,
   '🙃': emoticons.happy,
@@ -39,16 +38,16 @@ const listaEmoji = {
   '🥲': emoticons.teethSmile,
 }
 
-const mostraConteudo = () => {
+const convert = () => {
   let inputEmojis = splitter.splitGraphemes(document.getElementById('emoji').value)
   let divEmoticons = '';
   let divTxt = '';
 
   inputEmojis.forEach(emoji => {
-    for (let prop in listaEmoji) {
+    for (let prop in emojiList) {
       if (prop == emoji) {
-        divEmoticons += `<img src=${listaEmoji[prop].img}>`
-        divTxt += " " + listaEmoji[prop].txt; // Test whether space is really needed
+        divEmoticons += `<img src=${emojiList[prop].img}>`
+        divTxt += " " + emojiList[prop].txt; // Test whether space is really needed
       }
     }
     document.getElementById('resultEmoticon').innerHTML = divEmoticons;
