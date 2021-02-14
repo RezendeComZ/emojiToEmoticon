@@ -130,6 +130,7 @@ let divTxt = '';
 let divEmoticons = '';
 
 const convert = () => {
+  document.getElementById('app').style.display = 'block';
   let inputEmojis = splitter.splitGraphemes(document.getElementById('emoji').value)
   divEmoticons = ''
   divTxt = '';
