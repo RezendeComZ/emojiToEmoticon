@@ -1,8 +1,8 @@
-// Copy button
+// Todo:
 // Option to put a space between emoticons texts
 // Separate spaces and lines
 // Separate words from convertion
-// Show unconverted
+// Option to exhibit two types of some emoticons
 // Emoji keyboard
 
 document.getElementById('loading').style.display = 'none'
@@ -77,6 +77,9 @@ const emoticons = {
   confused: {
     txt: ':-S',
     img: `${path}faces/confused_smile.gif`
+  },
+  embarrassed: {
+    txt: ':-$'
   }
 }
 
@@ -144,27 +147,31 @@ const emojiList = {
   '😡': emoticons.angryRed,
   '🤬': emoticons.angryRed,
   '🤯': emoticons.confused,
+  '😳': emoticons.embarrassed,
 }
 let divTxt = '';
 let divEmoticons = '';
+let divUnconverted = '';
 
 const convert = () => {
   document.getElementById('app').style.display = 'block';
-  let inputEmojis = splitter.splitGraphemes(document.getElementById('emoji').value)
+  unconverted.style.display = 'none';
+  let inputEmojis = splitter.splitGraphemes(document.getElementById('emoji').value).filter(emoji => emoji != ' ')
   divEmoticons = ''
   divTxt = '';
+  divUnconverted = '';
 
   inputEmojis.forEach(emoji => {
     if (emojiList[emoji] != undefined) {
       divEmoticons += `<img src=${emojiList[emoji].img}>`
       divTxt += " " + emojiList[emoji].txt; // Test whether space is really needed
-    } else if (emojiList[emoji] == ' ') {
-      console.log('Espaço detectado')
     } else {
-      console.log(emoji + ' is not in the list or contains space')
+      unconverted.style.display = 'block'
+      divUnconverted += emoji
     }
   });
   document.getElementById('resultEmoticon').innerHTML = divEmoticons;
   document.getElementById('resultText').innerText = divTxt;
+  document.getElementById('resultUnconverted').innerText = divUnconverted
   navigator.clipboard.writeText(divTxt)
 }
