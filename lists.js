@@ -141,3 +141,34 @@ const emojiList = {
   '🤯': emoticons.confused,
   '😳': emoticons.embarrassed,
 }
+
+// Reference
+
+let emojiArray = Object.entries(emojiList)
+let emoticonArray = Object.entries(emoticons)
+
+// Emoji: emoticon
+let emojiToEmoticon = [];
+for (let i = 0; i < emojiArray.length; i++){
+  emojiToEmoticon[i] = emojiArray[i][0] + ': ';
+  for (let j = 0; j < emoticonArray.length; j++) {
+      if (emojiArray[i][1].txt === emoticonArray[j][1].txt) {
+        emojiToEmoticon[i] += emoticonArray[j][1].txt
+      }
+  }
+}
+// console.log(emojiToEmoticon)
+
+// Emoticon: emoji
+let emoticonToEmoji = [];
+
+for (let i = 0; i < emoticonArray.length; i++) {
+  emoticonToEmoji[i] = emoticonArray[i][0] + ': '
+  for (let j = 0; j < emojiArray.length; j++) {
+    if (emoticonArray[i][1].txt == emojiArray[j][1].txt) {
+      emoticonToEmoji[i] += emojiArray[j][0]
+    }
+  }
+}
+
+console.log(emoticonToEmoji)
