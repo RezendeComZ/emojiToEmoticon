@@ -160,15 +160,16 @@ for (let i = 0; i < emojiArray.length; i++){
 // console.log(emojiToEmoticon)
 
 // Emoticon: emoji
+
 let emoticonToEmoji = [];
+let tableEmoticon = document.getElementById('tableEmoticon');
 
 for (let i = 0; i < emoticonArray.length; i++) {
-  emoticonToEmoji[i] = emoticonArray[i][0] + ': '
+  emoticonToEmoji[i] = ''
   for (let j = 0; j < emojiArray.length; j++) {
     if (emoticonArray[i][1].txt == emojiArray[j][1].txt) {
       emoticonToEmoji[i] += emojiArray[j][0]
     }
   }
+  tableEmoticon.innerHTML += `<tr><th scope="row"><img src=${emoticonArray[i][1].img}></th></th><td>${emoticonToEmoji[i]}</td></tr>`;
 }
-
-console.log(emoticonToEmoji)
