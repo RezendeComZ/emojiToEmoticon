@@ -171,5 +171,5 @@ for (let i = 0; i < emoticonArray.length; i++) {
       emoticonToEmoji[i] += emojiArray[j][0]
     }
   }
-  tableEmoticon.innerHTML += `<tr><th scope="row"><img src=${emoticonArray[i][1].img}></th></th><td>${emoticonToEmoji[i]}</td></tr>`;
+  tableEmoticon.innerHTML += `<div class="row"><div class="col"><img src=${emoticonArray[i][1].img}></div><div class="col-11">${emoticonToEmoji[i]}</div></div>`;
 }
