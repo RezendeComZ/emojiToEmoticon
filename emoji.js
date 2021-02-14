@@ -65,6 +65,18 @@ const emoticons = {
   cry: {
     txt: ":'(",
     img: `${path}faces/cry_smile.gif`
+  },
+  angry: {
+    txt: '8o',
+    img: `${path}faces/angry.gif`
+  },
+  angryRed: {
+    txt: ':-@',
+    img: `${path}faces/angry_smile.gif`
+  },
+  confused: {
+    txt: ':-S',
+    img: `${path}faces/confused_smile.gif`
   }
 }
 
@@ -125,6 +137,13 @@ const emojiList = {
   '🥺': emoticons.cry,
   '😢': emoticons.cry,
   '😭': emoticons.cry,
+  '😤': emoticons.angry,
+  '😤': emoticons.angry,
+  '😠': emoticons.angry,
+  '😠': emoticons.angry,
+  '😡': emoticons.angryRed,
+  '🤬': emoticons.angryRed,
+  '🤯': emoticons.confused,
 }
 let divTxt = '';
 let divEmoticons = '';
