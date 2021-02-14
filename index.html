@@ -8,6 +8,7 @@
   <title>Emoji to Emoticon</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
     integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -15,16 +16,20 @@
     <div class="form-group mt-4">
       <textarea class="form-control" id="emoji" rows="4" cols="50">😇</textarea>
       <br>
-      <button class="btn-primary" onclick="convert()">Convert</button>
+      <button class="btn btn-primary" onclick="convert()" style="display: none">Convert & Copy</button>
     </div>
-    <h2>Text:</h2>
-    <div id="resultText">
+    <h1 id="loading">Loading scripts...</h2>
+      <div id="app" style="display: none">
+        <h2>Text:</h2>
+        <div>
+          <p id="resultText"></p>
+        </div>
+        <h2>MSN emoticon:</h2>
+        <div id="resultEmoticon">
 
-    </div>
-    <h2>MSN emoticon:</h2>
-    <div id="resultEmoticon">
+        </div>
+      </div>
 
-    </div>
   </div>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

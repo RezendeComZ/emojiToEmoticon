@@ -5,6 +5,8 @@
 // Show unconverted
 // Emoji keyboard
 
+document.getElementById('loading').style.display = 'none'
+
 const path = "./emoticons/";
 
 const emoticons = {
@@ -74,6 +76,7 @@ const emojiList = {
   '😊': emoticons.happy,
   '🥲': emoticons.happy,
   '☺️': emoticons.happy,
+  '😌': emoticons.happy,
   '😀': emoticons.teethSmile,
   '😃': emoticons.teethSmile,
   '😄': emoticons.teethSmile,
@@ -123,20 +126,25 @@ const emojiList = {
   '😢': emoticons.cry,
   '😭': emoticons.cry,
 }
+let divTxt = '';
+let divEmoticons = '';
 
 const convert = () => {
   let inputEmojis = splitter.splitGraphemes(document.getElementById('emoji').value)
-  let divEmoticons = '';
-  let divTxt = '';
+  divEmoticons = ''
+  divTxt = '';
 
   inputEmojis.forEach(emoji => {
-    for (let prop in emojiList) {
-      if (prop == emoji) {
-        divEmoticons += `<img src=${emojiList[prop].img}>`
-        divTxt += " " + emojiList[prop].txt; // Test whether space is really needed
-      }
+    if (emojiList[emoji] != undefined) {
+      divEmoticons += `<img src=${emojiList[emoji].img}>`
+      divTxt += " " + emojiList[emoji].txt; // Test whether space is really needed
+    } else if (emojiList[emoji] == ' ') {
+      console.log('Espaço detectado')
+    } else {
+      console.log(emoji + ' is not in the list or contains space')
     }
-    document.getElementById('resultEmoticon').innerHTML = divEmoticons;
-    document.getElementById('resultText').innerText = divTxt;
   });
+  document.getElementById('resultEmoticon').innerHTML = divEmoticons;
+  document.getElementById('resultText').innerText = divTxt;
+  navigator.clipboard.writeText(divTxt)
 }
