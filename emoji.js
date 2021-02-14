@@ -4,6 +4,8 @@
 // Separate words from convertion
 // Option to exhibit two types of some emoticons
 // Emoji keyboard
+// Button 'Show side-by-side' comparison
+// Buttow 'Show table reference'
 
 document.getElementById('loading').style.display = 'none'
 
