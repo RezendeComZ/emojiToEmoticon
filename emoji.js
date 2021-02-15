@@ -5,13 +5,13 @@
 // Option to exhibit two types of some emoticons
 // Emoji keyboard
 // Button 'Show side-by-side' comparison
-// Checkbox option to only convert without copy
 
 document.getElementById('loading').style.display = 'none'
 
 let divTxt = '';
 let divEmoticons = '';
 let divUnconverted = '';
+const copyCheckbox = document.getElementById('copy');
 
 const convert = () => {
   document.getElementById('app').style.display = 'block';
@@ -33,5 +33,7 @@ const convert = () => {
   document.getElementById('resultEmoticon').innerHTML = divEmoticons;
   document.getElementById('resultText').innerText = divTxt;
   document.getElementById('resultUnconverted').innerText = divUnconverted
-  navigator.clipboard.writeText(divTxt)
+  if (copyCheckbox.checked === true) {
+      navigator.clipboard.writeText(divTxt)
+  }
 }

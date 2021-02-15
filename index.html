@@ -13,14 +13,26 @@
 
 <body>
   <div class="container">
-    <h3 class="mt-4">Emoji to MSN Emoticon converter - beta <span>
+    <h3 class="mt-4">Emoji to MSN Emoticon converter<span>
       </span></h3>
     <div class="form-group mt-4">
-      <textarea class="form-control" id="emoji" rows="4"
-        cols="50">😇🙂😀😉♥️💔💋💲👥😛🤯🤨🤓😎⭐️🎂🍺🍸🍽🥣☕️🍕🌷🥀🥳🙁😭😤😡🙄🗣😳😮🤗🤝🤔🤐😐😴🤢👹🚹🚺👍👎🦇🐱🐶🐌🐑📷🎥🕑🖥💡📱📞✉️🏝⛈🌧🌜☂️🎵🎁⚽️✈️🚗</textarea>
+      <textarea class="form-control" id="emoji" rows="4" cols="50"
+        placeholder="Emoji">😇🙂😀😉♥️💔💋💲👥😛🤯🤨🤓😎⭐️🎂🍺🍸🍽🥣☕️🍕🌷🥀🥳🙁😭😤😡🙄🗣😳😮🤗🤝🤔🤐😐😴🤢👹🚹🚺👍👎🦇🐱🐶🐌🐑📷🎥🕑🖥💡📱📞✉️🏝⛈🌧🌜☂️🎵🎁⚽️✈️🚗</textarea>
       <br>
-      <button class="btn btn-primary" onclick="convert()" style="display: none">Convert & Copy</button>
+      <div class='d-flex'>
+        <button class="btn btn-primary d-flex align-items-center" onclick="convert()"
+          style="display: none">Convert</button>
+
+        <div class="form-group form-check d-flex align-items-center mt-2 ml-2">
+          <input type="checkbox" name="copy" id="copy" class="form-check-input" checked> <label for="copy"
+            class="form-check-label">Copy to clipboard</label>
+        </div>
+
+      </div>
+
+
     </div>
+
     <h2 id="loading">Loading scripts...</h2>
     <div id="app" style="display: none" class="mb-2">
       <h4>Text:</h4>
