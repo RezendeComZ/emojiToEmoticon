@@ -37,22 +37,44 @@
         </div>
       </div>
     </div>
-    <div class="reference">
-      <h4>Reference table:</h4>
 
-      <div class="emoticonToEmoji">
-        <div id="tableEmoticon">
-          <div class="row">
-            <div class="col">
-              <p><span class="bold">MSN</span> (70)</p>
+    <div id="accordion" class="mb-3">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+              aria-controls="collapseOne">
+              Reference table
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+
+            <div class="reference">
+              <div class="emoticonToEmoji">
+                <div id="tableEmoticon">
+                  <div class="row">
+                    <div class="col">
+                      <p><span class="bold">MSN</span> (68)</p>
+                    </div>
+                    <div class="col-10">
+                      <p><span class="bold">Emojis</span> (<span id='numEmojis'></span> supported)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-10">
-              <p><span class="bold">Emojis</span> (<span id='numEmojis'></span> supported)</p>
-            </div>
+
           </div>
         </div>
       </div>
+
+
     </div>
+
+
   </div>
   <footer class="github">
     <p><a href="https://github.com/rezendecomz/emojiToEmoticon/" target="_blank">GitHub</a></p>
