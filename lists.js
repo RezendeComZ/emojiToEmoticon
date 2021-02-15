@@ -1,5 +1,4 @@
 const path = "./emoticons/";
-
 const emoticons = {
   angel: {
     txt: "(A)",
@@ -331,7 +330,7 @@ const emojiList = {
   '💟 ': emoticons.heart,
   '💌': emoticons.heart,
   '♡': emoticons.heart,
-  '💔 ': emoticons.brokenHeart,
+  '💔': emoticons.brokenHeart,
   '😘': emoticons.kiss,
   '😗': emoticons.kiss,
   '😙': emoticons.kiss,
@@ -735,7 +734,6 @@ const emojiList = {
 }
 
 // Reference
-
 let emojiArray = Object.entries(emojiList)
 let emoticonArray = Object.entries(emoticons)
 let numEmoji = document.getElementById('numEmojis').innerText =  emojiArray.length + 1
@@ -750,10 +748,8 @@ for (let i = 0; i < emojiArray.length; i++){
       }
   }
 }
-// console.log(emojiToEmoticon)
 
 // Emoticon: emoji
-
 let emoticonToEmoji = [];
 let tableEmoticon = document.getElementById('tableEmoticon');
 
