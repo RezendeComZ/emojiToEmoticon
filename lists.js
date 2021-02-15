@@ -21,6 +21,10 @@ const emoticons = {
     txt: '(L)',
     img: `${path}love-reaction/heart.gif`
   },
+  brokenHeart: {
+    txt: '(U)',
+    img: `${path}love-reaction/broken_heart.gif`
+  },
   kiss: {
     txt: '(K)',
     img: `${path}love-reaction/kiss.gif`
@@ -41,7 +45,7 @@ const emoticons = {
     txt: '(H)',
     img: `${path}faces/shades_smile.gif`
   },
-  faceStar: {
+  star: {
     txt: '(*)', // ( (*) (*) )
     img: `${path}nature/star.gif`
   },
@@ -109,6 +113,54 @@ const emoticons = {
     txt: '(6)',
     img: `${path}faces/devil_smile.gif`
   },
+  thumbsUp: {
+    txt: '(Y)',
+    img: `${path}love-reaction/thumbs_up.gif`
+  },
+  thumbsDown: {
+    txt: '(N)',
+    img: `${path}love-reaction/thumbs_down.gif`
+  },
+  bat: {
+    txt: ':-[',
+    img: `${path}animals/bat.gif`
+  },
+  cat: {
+    txt: '(@)',
+    img: `${path}animals/cat.gif`
+  },
+  dog: {
+    txt: '(&)',
+    img: `${path}animals/dog.gif`
+  },
+  escargot: {
+    txt: '(sn)',
+    img: `${path}animals/escargot.gif`
+  },
+  sheep: {
+    txt: '(bah)',
+    img: `${path}animals/sheep.gif`
+  },
+  camera: {
+    txt: '(P)',
+    img: `${path}eletronic/camera.gif`
+  },
+  movie: {
+    txt: '(~)',
+    img: `${path}eletronic/film.gif`
+  },
+  clock: {
+    txt: '(O)',
+    img: `${path}eletronic/clock.gif`
+  },
+  computer: {
+    txt: '(co)',
+    img: `${path}eletronic/computer.gif`
+  },
+  light: {
+    txt: '(I)',
+    img: `${path}eletronic/lightbulb.gif`
+  },
 }
 
 const emojiList = {
@@ -140,13 +192,36 @@ const emojiList = {
   '😼': emoticons.wink,
   '😍': emoticons.heart,
   '😻': emoticons.heart,
+  '♥️': emoticons.heart,
+  '❤️': emoticons.heart,
+  '🧡': emoticons.heart,
+  '💛': emoticons.heart,
+  '💚': emoticons.heart,
+  '💙': emoticons.heart,
+  '💜': emoticons.heart,
+  '🖤': emoticons.heart,
+  '🤍': emoticons.heart,
+  '🤍': emoticons.heart,
+  '🤎': emoticons.heart,
   '🥰': emoticons.heart,
+  '❣️': emoticons.heart,
+  '💕': emoticons.heart,
+  '💞': emoticons.heart,
+  '💓': emoticons.heart,
+  '💗': emoticons.heart,
+  '💖': emoticons.heart,
+  '💘': emoticons.heart,
+  '💝': emoticons.heart,
+  '💟 ': emoticons.heart,
+  '💔 ': emoticons.brokenHeart,
   '😘': emoticons.kiss,
   '😗': emoticons.kiss,
   '😙': emoticons.kiss,
   '😚': emoticons.kiss,
   '😚': emoticons.kiss,
   '😽': emoticons.kiss,
+  '👄': emoticons.kiss,
+  '💋': emoticons.kiss,
   '😋': emoticons.tongue,
   '😛': emoticons.tongue,
   '😝': emoticons.tongue,
@@ -154,13 +229,15 @@ const emojiList = {
   '😜': emoticons.tongue,
   '😜': emoticons.tongue,
   '🤪': emoticons.tongue,
+  '👅': emoticons.tongue,
   '🤨': emoticons.confused,
   '🧐': emoticons.confused,
   '🙄': emoticons.confused,
   '🤓': emoticons.nerd,
   '🥸': emoticons.nerd,
   '😎': emoticons.hot,
-  '🤩': emoticons.faceStar,
+  '🤩': emoticons.star,
+  '🌠': emoticons.star,
   '🥳': emoticons.birthday,
   '😒': emoticons.sad,
   '😞': emoticons.sad,
@@ -227,6 +304,38 @@ const emojiList = {
   '😈': emoticons.devil,
   '👹': emoticons.devil,
   '🥳': emoticons.party,
+  '✌️': emoticons.thumbsUp,
+  '🤞': emoticons.thumbsUp,
+  '🤟': emoticons.thumbsUp,
+  '🤘': emoticons.thumbsUp,
+  '🤙': emoticons.thumbsUp,
+  '👍': emoticons.thumbsUp,
+  '👎': emoticons.thumbsDown,
+  '🦇': emoticons.bat, //
+  '🐱': emoticons.cat,
+  '🐶': emoticons.dog,
+  '🐌': emoticons.escargot,
+  '🐑': emoticons.sheep,
+  '📷': emoticons.camera,
+  '📸': emoticons.camera,
+  '📹': emoticons.movie,
+  '🎥': emoticons.movie,
+  '📽': emoticons.movie,
+  '🎞': emoticons.movie,
+  '📼': emoticons.movie,
+  '📺': emoticons.movie,
+  '⏱': emoticons.clock,
+  '⏲ ': emoticons.clock,
+  '⏰': emoticons.clock,
+  '🕰': emoticons.clock,
+  '⌛️': emoticons.clock,
+  '⏳': emoticons.clock,
+  '💻': emoticons.computer,
+  '⌨️': emoticons.computer,
+  '🖥': emoticons.computer,
+  '💡': emoticons.light,
+  '🔦': emoticons.light,
+  '🕯': emoticons.light,
 }
 
 // Reference
