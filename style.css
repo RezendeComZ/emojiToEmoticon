@@ -1,0 +1,13 @@
+.github {
+  position: fixed;
+  bottom: 0px;
+  background-color: rgb(0, 105, 217);
+  border-radius: 10px 0px 0px 0px;
+  line-height: 0%;
+  padding: 30px 30px 10px 20px;
+  right: -10px;
+}
+
+.github a {
+  color: white;
+}
