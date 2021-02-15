@@ -447,7 +447,7 @@ const emojiList = {
   '🤙': emoticons.thumbsUp,
   '👍': emoticons.thumbsUp,
   '👎': emoticons.thumbsDown,
-  '🦇': emoticons.bat, //
+  '🦇': emoticons.bat,
   '🐱': emoticons.cat,
   '🐶': emoticons.dog,
   '🐌': emoticons.escargot,
@@ -533,6 +533,8 @@ const emojiList = {
 
 let emojiArray = Object.entries(emojiList)
 let emoticonArray = Object.entries(emoticons)
+let numEmoji = document.getElementById('numEmojis').innerText =  emojiArray.length + 1
+let numEmoticons = document.getElementById('numEmoticons').innerText =  emoticonArray.length + 1
 
 // Emoji: emoticon
 let emojiToEmoticon = [];
@@ -558,5 +560,5 @@ for (let i = 0; i < emoticonArray.length; i++) {
       emoticonToEmoji[i] += emojiArray[j][0]
     }
   }
-  tableEmoticon.innerHTML += `<div class="row"><div class="col"><img src=${emoticonArray[i][1].img}></div><div class="col-11">${emoticonToEmoji[i]}</div></div>`;
+  tableEmoticon.innerHTML += `<div class="row"><div class="col"><img src=${emoticonArray[i][1].img}></div><div class="col-10">${emoticonToEmoji[i]}</div></div>`;
 }

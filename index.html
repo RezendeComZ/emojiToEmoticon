@@ -13,13 +13,15 @@
 
 <body>
   <div class="container">
+    <h3 class="mt-4">Emoji to Emoticon converter - beta <span>
+      </span></h3>
     <div class="form-group mt-4">
       <textarea class="form-control" id="emoji" rows="4" cols="50">😇</textarea>
       <br>
       <button class="btn btn-primary" onclick="convert()" style="display: none">Convert & Copy</button>
     </div>
     <h2 id="loading">Loading scripts...</h2>
-    <div id="app" style="display: none">
+    <div id="app" style="display: none" class="mb-2">
       <h4>Text:</h4>
       <div>
         <p id="resultText"></p>
@@ -36,16 +38,16 @@
       </div>
     </div>
     <div class="reference">
-      <h4>Reference tables:</h4>
+      <h4>Reference table:</h4>
 
       <div class="emoticonToEmoji">
         <div id="tableEmoticon">
           <div class="row">
             <div class="col">
-              <p>MSN</p>
+              <p>MSN (<span id="numEmoticons"></span> of 70 - WIP)</p>
             </div>
-            <div class="col-11">
-              <p>Emoji</p>
+            <div class="col-10">
+              <p>Emoji (<span id='numEmojis'></span> supported)</p>
             </div>
           </div>
         </div>
