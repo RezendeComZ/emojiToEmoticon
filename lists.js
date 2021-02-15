@@ -29,6 +29,10 @@ const emoticons = {
     txt: '(K)',
     img: `${path}love-reaction/kiss.gif`
   },
+  money: {
+    txt: '(mo)',
+    img: `${path}money.gif`
+  },
   tongue: {
     txt: ':-P',
     img: `${path}faces/tongue_smile.gif`
@@ -36,6 +40,10 @@ const emoticons = {
   confused: {
     txt: '^o)',
     img: `${path}faces/confused.gif`
+  },
+  idk: {
+    txt: ':^)',
+    img: `${path}faces/idk.gif`
   },
   nerd: {
     txt: '8-|',
@@ -49,9 +57,41 @@ const emoticons = {
     txt: '(*)', // ( (*) (*) )
     img: `${path}nature/star.gif`
   },
-  birthday: {
+  cake: {
     txt: '(^)',
     img: `${path}food-drink/cake.gif`
+  },
+  beer: {
+    txt: '(B)',
+    img: `${path}food-drink/beer_mug.gif`
+  },
+  drink: {
+    txt: '(D)',
+    img: `${path}food-drink/martini.gif`
+  },
+  plate: {
+    txt: '(pl)',
+    img: `${path}food-drink/plate.gif`
+  },
+  bowl: {
+    txt: '(||)',
+    img: `${path}food-drink/bowl.gif`
+  },
+  coffee: {
+    txt: '(C)',
+    img: `${path}food-drink/coffee.gif`
+  },
+  pizza: {
+    txt: '(pi)',
+    img: `${path}food-drink/pizza.gif`
+  },
+  rose: {
+    txt: '(F)',
+    img: `${path}love-reaction/rose.gif`
+  },
+  roseWilted: {
+    txt: '(W)',
+    img: `${path}love-reaction/wilted_rose.gif`
   },
   party: {
     txt: '<:o)',
@@ -76,6 +116,14 @@ const emoticons = {
   confused: {
     txt: ':-S',
     img: `${path}faces/confused_smile.gif`
+  },
+  eyeRolling: {
+    txt: '8-)',
+    img: `${path}faces/eye-rolling.gif`
+  },
+  gossip: {
+    txt: ':-*',
+    img: `${path}faces/gossip.gif`
   },
   embarrassed: {
     txt: ':-$',
@@ -112,6 +160,14 @@ const emoticons = {
   devil: {
     txt: '(6)',
     img: `${path}faces/devil_smile.gif`
+  },
+  boy: {
+    txt: '(Z)',
+    img: `${path}faces/guy.gif`
+  },
+  girl: {
+    txt: '(X)',
+    img: `${path}faces/girl.gif`
   },
   thumbsUp: {
     txt: '(Y)',
@@ -160,6 +216,18 @@ const emoticons = {
   light: {
     txt: '(I)',
     img: `${path}eletronic/lightbulb.gif`
+  },
+  mobile: {
+    txt: '(mp)',
+    img: `${path}eletronic/mobile.gif`
+  },
+  phone: {
+    txt: '(T)',
+    img: `${path}eletronic/phone.gif`
+  },
+  envelope: {
+    txt: '(E)',
+    img: `${path}envelope.gif`
   },
 }
 
@@ -213,6 +281,7 @@ const emojiList = {
   '💘': emoticons.heart,
   '💝': emoticons.heart,
   '💟 ': emoticons.heart,
+  '💌': emoticons.heart,
   '💔 ': emoticons.brokenHeart,
   '😘': emoticons.kiss,
   '😗': emoticons.kiss,
@@ -230,15 +299,51 @@ const emojiList = {
   '😜': emoticons.tongue,
   '🤪': emoticons.tongue,
   '👅': emoticons.tongue,
-  '🤨': emoticons.confused,
-  '🧐': emoticons.confused,
-  '🙄': emoticons.confused,
+  '🤨': emoticons.idk,
+  '🧐': emoticons.idk,
+  '🤷‍♀️': emoticons.confused,
+  '🤷‍♂️': emoticons.confused,
+  '🙄': emoticons.eyeRolling,
   '🤓': emoticons.nerd,
   '🥸': emoticons.nerd,
   '😎': emoticons.hot,
   '🤩': emoticons.star,
   '🌠': emoticons.star,
-  '🥳': emoticons.birthday,
+  '🥧': emoticons.cake,
+  '🧁': emoticons.cake,
+  '🍰': emoticons.cake,
+  '🎂': emoticons.cake,
+  '🍮': emoticons.cake,
+  '🍺': emoticons.beer,
+  '🍻': emoticons.beer,
+  '🥂': emoticons.beer,
+  '🍷': emoticons.beer,
+  '🥃': emoticons.beer,
+  '🍸': emoticons.drink,
+  '🍹': emoticons.drink,
+  '🧉': emoticons.drink,
+  '🍾': emoticons.drink,
+  '🥄': emoticons.plate,
+  '🍴': emoticons.plate,
+  '🍽': emoticons.plate,
+  '🥡': emoticons.plate,
+  '🥢': emoticons.plate,
+  '🥣': emoticons.bowl,
+  '🍵': emoticons.bowl,
+  '🫖': emoticons.coffee,
+  '☕️': emoticons.coffee,
+  '🥤': emoticons.coffee,
+  '🧋': emoticons.coffee,
+  '🍶': emoticons.coffee,
+  '🍕': emoticons.pizza,
+  '💐': emoticons.rose,
+  '🌷': emoticons.rose,
+  '🌹': emoticons.rose,
+  '🌺': emoticons.rose,
+  '🌸': emoticons.rose,
+  '🌼': emoticons.rose,
+  '🌻': emoticons.rose,
+  '🥀': emoticons.roseWilted,
   '😒': emoticons.sad,
   '😞': emoticons.sad,
   '😔': emoticons.sad,
@@ -290,6 +395,8 @@ const emojiList = {
   '😶': emoticons.what,
   '😐': emoticons.what,
   '😑': emoticons.what,
+  '🤦‍♀️': emoticons.what,
+  '🤦': emoticons.what,
   '🥱': emoticons.sleepy,
   '😴': emoticons.sleepy,
   '🤤': emoticons.sleepy,
@@ -303,7 +410,33 @@ const emojiList = {
   '🤕': emoticons.sick,
   '😈': emoticons.devil,
   '👹': emoticons.devil,
+  '🗣': emoticons.gossip,
+  '👥': emoticons.gossip,
+  '🫂': emoticons.gossip,
+  '💁‍♂️': emoticons.boy,
+  '🙅‍♂️': emoticons.boy,
+  '🙆‍♂️': emoticons.boy,
+  '🙋‍♂️': emoticons.boy,
+  '♂️': emoticons.boy,
+  '🚶': emoticons.boy,
+  '🏃': emoticons.boy,
+  '🙎‍♂️': emoticons.boy,
+  '🙍‍♂️': emoticons.boy,
+  '👨‍': emoticons.boy,
+  '💁‍♀️': emoticons.girl,
+  '🙅‍♀️': emoticons.girl,
+  '🙆‍♀️': emoticons.girl,
+  '🙋‍♀️': emoticons.girl,
+  '🙎‍♀️': emoticons.girl,
+  '🙍‍♀️': emoticons.girl,
+  '👩‍': emoticons.girl,
+  '🚶‍♀️': emoticons.girl,
+  '🏃‍♀️': emoticons.girl,
+  '♀️': emoticons.girl,
   '🥳': emoticons.party,
+  '🪅': emoticons.party,
+  '🎊': emoticons.party,
+  '🎉': emoticons.party,
   '✌️': emoticons.thumbsUp,
   '🤞': emoticons.thumbsUp,
   '🤟': emoticons.thumbsUp,
@@ -324,6 +457,8 @@ const emojiList = {
   '🎞': emoticons.movie,
   '📼': emoticons.movie,
   '📺': emoticons.movie,
+  '🎬': emoticons.movie,
+  '🎦': emoticons.movie,
   '⏱': emoticons.clock,
   '⏲ ': emoticons.clock,
   '⏰': emoticons.clock,
@@ -333,9 +468,50 @@ const emojiList = {
   '💻': emoticons.computer,
   '⌨️': emoticons.computer,
   '🖥': emoticons.computer,
+  '👩🏻‍💻': emoticons.computer,
+  '👨🏻‍💻': emoticons.computer,
+  '👩🏼‍💻': emoticons.computer,
+  '👨🏼‍💻': emoticons.computer,
+  '👩🏽‍💻': emoticons.computer,
+  '👨🏽‍💻': emoticons.computer,
+  '👩🏾‍💻': emoticons.computer,
+  '👨🏾‍💻': emoticons.computer,
+  '👩🏿‍💻': emoticons.computer,
+  '👨🏿‍💻': emoticons.computer,
   '💡': emoticons.light,
   '🔦': emoticons.light,
   '🕯': emoticons.light,
+  '📱': emoticons.mobile,
+  '📲': emoticons.mobile,
+  '📟': emoticons.mobile,
+  '📵': emoticons.mobile,
+  '📞': emoticons.phone,
+  '☎️': emoticons.phone,
+  '📠': emoticons.phone,
+  '🧧': emoticons.envelope,
+  '✉️': emoticons.envelope,
+  '📩': emoticons.envelope,
+  '📨': emoticons.envelope,
+  '📧': emoticons.envelope,
+  '📥': emoticons.envelope,
+  '📤': emoticons.envelope,
+  '📦': emoticons.envelope,
+  '📪': emoticons.envelope,
+  '📪': emoticons.envelope,
+  '📫': emoticons.envelope,
+  '📬': emoticons.envelope,
+  '📭': emoticons.envelope,
+  '🪙': emoticons.money,
+  '🤑': emoticons.money,
+  '🏦': emoticons.money,
+  '💸': emoticons.money,
+  '💵': emoticons.money,
+  '💴': emoticons.money,
+  '💶': emoticons.money,
+  '💷': emoticons.money,
+  '💰': emoticons.money,
+  '💳': emoticons.money,
+  '🏧': emoticons.money,
 }
 
 // Reference
