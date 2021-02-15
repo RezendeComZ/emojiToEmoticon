@@ -33,6 +33,10 @@ const emoticons = {
     txt: '(mo)',
     img: `${path}money.gif`
   },
+  messenger: {
+    txt: '(M)',
+    img: `${path}messenger.gif`
+  },
   tongue: {
     txt: ':-P',
     img: `${path}faces/tongue_smile.gif`
@@ -411,7 +415,6 @@ const emojiList = {
   '😈': emoticons.devil,
   '👹': emoticons.devil,
   '🗣': emoticons.gossip,
-  '👥': emoticons.gossip,
   '🫂': emoticons.gossip,
   '💁‍♂️': emoticons.boy,
   '🙅‍♂️': emoticons.boy,
@@ -512,6 +515,18 @@ const emojiList = {
   '💰': emoticons.money,
   '💳': emoticons.money,
   '🏧': emoticons.money,
+  '👬': emoticons.messenger,
+  '👫': emoticons.messenger,
+  '👥': emoticons.messenger,
+  '🫂': emoticons.messenger,
+  '👩‍❤️‍👩': emoticons.messenger,
+  '💑': emoticons.messenger,
+  '👨‍❤️‍👨': emoticons.messenger,
+  '👩‍❤️‍👨': emoticons.messenger,
+  '👩‍❤️‍💋‍👩': emoticons.messenger,
+  '💏': emoticons.messenger,
+  '👨‍❤️‍💋‍👨': emoticons.messenger,
+  '👩‍❤️‍💋‍👨': emoticons.messenger,
 }
 
 // Reference
