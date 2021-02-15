@@ -141,6 +141,10 @@ const emoticons = {
     txt: '({)',
     img: `${path}faces/guy_hug.gif`
   },
+  girlHug: {
+    txt: '(})',
+    img: `${path}faces/girl_hug.gif`
+  },
   thinking: {
     txt: '*-)',
     img: `${path}faces/thinking.gif`
@@ -269,6 +273,10 @@ const emoticons = {
     txt: '(ap)',
     img: `${path}transport/airplane.gif`
   },
+  car: {
+    txt: '(au)',
+    img: `${path}transport/car.gif`
+  },
 }
 
 const emojiList = {
@@ -322,6 +330,7 @@ const emojiList = {
   '💝': emoticons.heart,
   '💟 ': emoticons.heart,
   '💌': emoticons.heart,
+  '♡': emoticons.heart,
   '💔 ': emoticons.brokenHeart,
   '😘': emoticons.kiss,
   '😗': emoticons.kiss,
@@ -353,6 +362,27 @@ const emojiList = {
   '⭐️': emoticons.star,
   '🌟': emoticons.star,
   '✨': emoticons.star,
+  '✴️': emoticons.star,
+  '🔯': emoticons.star,
+  '✡️': emoticons.star,
+  '✳️': emoticons.star,
+  '❇️': emoticons.star,
+  '❇️': emoticons.star,
+  '✦': emoticons.star,
+  '✧': emoticons.star,
+  '★': emoticons.star,
+  '☆': emoticons.star,
+  '✯': emoticons.star,
+  '✡︎': emoticons.star,
+  '✩': emoticons.star,
+  '✪': emoticons.star,
+  '✫': emoticons.star,
+  '✬': emoticons.star,
+  '✭': emoticons.star,
+  '✮': emoticons.star,
+  '✶': emoticons.star,
+  '✷': emoticons.star,
+  '✵': emoticons.star,
   '⚡️': emoticons.lightning,
   '⛈': emoticons.lightning,
   '🌩': emoticons.lightning,
@@ -379,6 +409,7 @@ const emojiList = {
   '🌓': emoticons.moon,
   '🌔': emoticons.moon,
   '🌃': emoticons.moon,
+  '☪️': emoticons.moon,
   '☂️': emoticons.umbrella,
   '☔️': emoticons.umbrella,
   '🥧': emoticons.cake,
@@ -461,6 +492,8 @@ const emojiList = {
   '😵': emoticons.surprised,
   '🙀': emoticons.surprised,
   '🤗': emoticons.hug,
+  '🫂': emoticons.girlHug,
+  '🤝': emoticons.girlHug,
   '🤔': emoticons.thinking,
   '🤫': emoticons.dontTell,
   '🤐': emoticons.dontTell,
@@ -517,6 +550,8 @@ const emojiList = {
   '🤘': emoticons.thumbsUp,
   '🤙': emoticons.thumbsUp,
   '👍': emoticons.thumbsUp,
+  '🆗': emoticons.thumbsUp,
+  '✅': emoticons.thumbsUp,
   '👎': emoticons.thumbsDown,
   '🦇': emoticons.bat,
   '🐱': emoticons.cat,
@@ -539,6 +574,30 @@ const emojiList = {
   '🕰': emoticons.clock,
   '⌛️': emoticons.clock,
   '⏳': emoticons.clock,
+  '🕐': emoticons.clock,
+  '🕑': emoticons.clock,
+  '🕒': emoticons.clock,
+  '🕓': emoticons.clock,
+  '🕔': emoticons.clock,
+  '🕕': emoticons.clock,
+  '🕖': emoticons.clock,
+  '🕗': emoticons.clock,
+  '🕘': emoticons.clock,
+  '🕙': emoticons.clock,
+  '🕚': emoticons.clock,
+  '🕛': emoticons.clock,
+  '🕜': emoticons.clock,
+  '🕝': emoticons.clock,
+  '🕞': emoticons.clock,
+  '🕟': emoticons.clock,
+  '🕠': emoticons.clock,
+  '🕡': emoticons.clock,
+  '🕢': emoticons.clock,
+  '🕣': emoticons.clock,
+  '🕤': emoticons.clock,
+  '🕥': emoticons.clock,
+  '🕦': emoticons.clock,
+  '🕧': emoticons.clock,
   '💻': emoticons.computer,
   '⌨️': emoticons.computer,
   '🖥': emoticons.computer,
@@ -555,10 +614,13 @@ const emojiList = {
   '💡': emoticons.light,
   '🔦': emoticons.light,
   '🕯': emoticons.light,
+  '🪔': emoticons.light,
   '📱': emoticons.mobile,
   '📲': emoticons.mobile,
   '📟': emoticons.mobile,
   '📵': emoticons.mobile,
+  '📴': emoticons.mobile,
+  '📳': emoticons.mobile,
   '📞': emoticons.phone,
   '☎️': emoticons.phone,
   '📠': emoticons.phone,
@@ -625,6 +687,11 @@ const emojiList = {
   '🔈': emoticons.music,
   '🔉': emoticons.music,
   '🔊': emoticons.music,
+  '🔇': emoticons.music,
+  '🔔': emoticons.music,
+  '🔕': emoticons.music,
+  '📣': emoticons.music,
+  '📢': emoticons.music,
   '🎁': emoticons.present,
   '🛍': emoticons.present,
   '🎀': emoticons.present,
@@ -642,6 +709,19 @@ const emojiList = {
   '🛩': emoticons.airplane,
   '💺': emoticons.airplane,
   '🛄': emoticons.airplane,
+  '🚗': emoticons.car,
+  '🚕': emoticons.car,
+  '🚙': emoticons.car,
+  '🏎 ': emoticons.car,
+  '🚓': emoticons.car,
+  '🛺': emoticons.car,
+  '🚔': emoticons.car,
+  '🚘': emoticons.car,
+  '🚖': emoticons.car,
+  '🛣': emoticons.car,
+  '🚦': emoticons.car,
+  '🚥': emoticons.car,
+  '⛽️': emoticons.car,
 }
 
 // Reference
@@ -649,7 +729,6 @@ const emojiList = {
 let emojiArray = Object.entries(emojiList)
 let emoticonArray = Object.entries(emoticons)
 let numEmoji = document.getElementById('numEmojis').innerText =  emojiArray.length + 1
-let numEmoticons = document.getElementById('numEmoticons').innerText =  emoticonArray.length + 1
 
 // Emoji: emoticon
 let emojiToEmoticon = [];
