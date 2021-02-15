@@ -159,7 +159,7 @@ const emoticons = {
   },
   sleepy: {
     txt: '|-)',
-    img: `${path}faces/sleepy.gif`
+    img: `${path}faces/Sleepy.gif`
   },
   sick: {
     txt: '+o(',
@@ -243,7 +243,7 @@ const emoticons = {
   },
   lightning: {
     txt: '(li)',
-    img: `${path}nature/lightning.gif`
+    img: `${path}nature/Lightning.gif`
   },
   rain: {
     txt: '(st)',
