@@ -5,7 +5,7 @@
 // Option to exhibit two types of some emoticons
 // Emoji keyboard
 // Button 'Show side-by-side' comparison
-// Buttow 'Show table reference'
+// Checkbox option to only convert without copy
 
 document.getElementById('loading').style.display = 'none'
 
