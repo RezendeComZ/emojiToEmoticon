@@ -49,6 +49,10 @@ const emoticons = {
     txt: '(^)',
     img: `${path}food-drink/cake.gif`
   },
+  party: {
+    txt: '<:o)',
+    img: `${path}faces/party.gif`
+  },
   sad: {
     txt: ':-(',
     img: `${path}faces/sad_smile.gif`
@@ -72,7 +76,39 @@ const emoticons = {
   embarrassed: {
     txt: ':-$',
     img: `${path}faces/red_smile.gif`
-  }
+  },
+  surprised: {
+    txt: ':-O',
+    img: `${path}faces/omg_smile.gif`
+  },
+  hug: {
+    txt: '({)',
+    img: `${path}faces/guy_hug.gif`
+  },
+  thinking: {
+    txt: '*-)',
+    img: `${path}faces/thinking.gif`
+  },
+  dontTell: {
+    txt: ':-#',
+    img: `${path}faces/shutup.gif`
+  },
+  what: {
+    txt: ':-|',
+    img: `${path}faces/what_smile.gif`
+  },
+  sleepy: {
+    txt: '|-)',
+    img: `${path}faces/sleepy.gif`
+  },
+  sick: {
+    txt: '+o(',
+    img: `${path}faces/sick.gif`
+  },
+  devil: {
+    txt: '(6)',
+    img: `${path}faces/devil_smile.gif`
+  },
 }
 
 const emojiList = {
@@ -94,15 +130,23 @@ const emojiList = {
   '😂': emoticons.teethSmile,
   '🤣': emoticons.teethSmile,
   '🥲': emoticons.teethSmile,
+  '🤠': emoticons.teethSmile,
+  '🤡': emoticons.teethSmile,
+  '😺': emoticons.teethSmile,
+  '😸': emoticons.teethSmile,
+  '😹': emoticons.teethSmile,
   '😉': emoticons.wink,
   '😏': emoticons.wink,
+  '😼': emoticons.wink,
   '😍': emoticons.heart,
+  '😻': emoticons.heart,
   '🥰': emoticons.heart,
   '😘': emoticons.kiss,
   '😗': emoticons.kiss,
   '😙': emoticons.kiss,
   '😚': emoticons.kiss,
   '😚': emoticons.kiss,
+  '😽': emoticons.kiss,
   '😋': emoticons.tongue,
   '😛': emoticons.tongue,
   '😝': emoticons.tongue,
@@ -112,6 +156,7 @@ const emojiList = {
   '🤪': emoticons.tongue,
   '🤨': emoticons.confused,
   '🧐': emoticons.confused,
+  '🙄': emoticons.confused,
   '🤓': emoticons.nerd,
   '🥸': emoticons.nerd,
   '😎': emoticons.hot,
@@ -127,19 +172,61 @@ const emojiList = {
   '😣': emoticons.sad,
   '😣': emoticons.sad,
   '😖': emoticons.sad,
+  '🥵': emoticons.sad,
+  '🥶': emoticons.sad,
   '😫': emoticons.cry,
   '😩': emoticons.cry,
   '🥺': emoticons.cry,
   '😢': emoticons.cry,
   '😭': emoticons.cry,
+  '😥': emoticons.cry,
+  '😥': emoticons.cry,
+  '😓': emoticons.cry,
+  '😿': emoticons.cry,
   '😤': emoticons.angry,
   '😤': emoticons.angry,
   '😠': emoticons.angry,
-  '😠': emoticons.angry,
+  '😬': emoticons.angry,
+  '😾': emoticons.angry,
   '😡': emoticons.angryRed,
   '🤬': emoticons.angryRed,
+  '👿': emoticons.angryRed,
+  '👺': emoticons.angryRed,
   '🤯': emoticons.confused,
   '😳': emoticons.embarrassed,
+  '😱': emoticons.surprised,
+  '😨': emoticons.surprised,
+  '😰': emoticons.surprised,
+  '🤭': emoticons.surprised,
+  '😯': emoticons.surprised,
+  '😦': emoticons.surprised,
+  '😦': emoticons.surprised,
+  '😧': emoticons.surprised,
+  '😮': emoticons.surprised,
+  '😲': emoticons.surprised,
+  '😵': emoticons.surprised,
+  '🙀': emoticons.surprised,
+  '🤗': emoticons.hug,
+  '🤔': emoticons.thinking,
+  '🤫': emoticons.dontTell,
+  '🤐': emoticons.dontTell,
+  '😶': emoticons.what,
+  '😐': emoticons.what,
+  '😑': emoticons.what,
+  '🥱': emoticons.sleepy,
+  '😴': emoticons.sleepy,
+  '🤤': emoticons.sleepy,
+  '😪': emoticons.sleepy,
+  '🥴': emoticons.sick,
+  '🤢': emoticons.sick,
+  '🤮': emoticons.sick,
+  '🤧': emoticons.sick,
+  '😷': emoticons.sick,
+  '🤒': emoticons.sick,
+  '🤕': emoticons.sick,
+  '😈': emoticons.devil,
+  '👹': emoticons.devil,
+  '🥳': emoticons.party,
 }
 
 // Reference
