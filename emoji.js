@@ -16,20 +16,15 @@ const app = document.getElementById('app');
 const textArea = document.getElementById('emoji');
 
 copyCheckbox.addEventListener('click', () => {
-  if (copyCheckbox.checked === true) {
-    navigator.clipboard.writeText(divTxt)
-  }
+  if (copyCheckbox.checked === true) {navigator.clipboard.writeText(divTxt)}
 });
 
 textArea.addEventListener('keyup', () => {
   if (textArea.value) {
     convert();
-    if (copyCheckbox.checked === true) {
-    navigator.clipboard.writeText(divTxt)
+    if (copyCheckbox.checked === true) return navigator.clipboard.writeText(divTxt)
   }
-  } else {
-    app.style.display = 'none'
-  }
+    return app.style.display = 'none'
 })
 
 const convert = () => {
