@@ -738,7 +738,7 @@ let emojiArray = Object.entries(emojiList)
 let emoticonArray = Object.entries(emoticons)
 let numEmoji = document.getElementById('numEmojis').innerText =  emojiArray.length + 1
 
-// Emoji: emoticon
+/* // Emoji: emoticon
 let emojiToEmoticon = [];
 for (let i = 0; i < emojiArray.length; i++){
   emojiToEmoticon[i] = emojiArray[i][0] + ': ';
@@ -748,12 +748,16 @@ for (let i = 0; i < emojiArray.length; i++){
       }
   }
 }
+*/
 
 // Emoticon: emoji
 let emoticonToEmoji = [];
 let tableEmoticon = document.getElementById('tableEmoticon');
+let tableNotReady = true;
 
-for (let i = 0; i < emoticonArray.length; i++) {
+const showTable = () => {
+  if (tableNotReady) {
+    for (let i = 0; i < emoticonArray.length; i++) {
   emoticonToEmoji[i] = ''
   for (let j = 0; j < emojiArray.length; j++) {
     if (emoticonArray[i][1].txt == emojiArray[j][1].txt) {
@@ -761,4 +765,7 @@ for (let i = 0; i < emoticonArray.length; i++) {
     }
   }
   tableEmoticon.innerHTML += `<div class="row"><div class="col"><img src=${emoticonArray[i][1].img}></div><div class="col-10">${emoticonToEmoji[i]}</div></div>`;
+  }
 }
+
+};

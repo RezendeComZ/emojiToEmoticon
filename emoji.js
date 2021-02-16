@@ -18,6 +18,9 @@ const textArea = document.getElementById('emoji')
 textArea.addEventListener('keyup', () => {
   if (textArea.value) {
     convert();
+    if (copyCheckbox.checked === true) {
+    navigator.clipboard.writeText(divTxt)
+  }
   } else {
     app.style.display = 'none'
   }
@@ -43,9 +46,6 @@ const convert = () => {
   document.getElementById('resultEmoticon').innerHTML = divEmoticons;
   document.getElementById('resultText').innerText = divTxt;
   document.getElementById('resultUnconverted').innerText = divUnconverted
-  if (copyCheckbox.checked === true) {
-      navigator.clipboard.writeText(divTxt)
-  }
 }
 
 convert();
