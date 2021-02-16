@@ -23,8 +23,9 @@ textArea.addEventListener('keyup', () => {
   if (textArea.value) {
     convert();
     if (copyCheckbox.checked === true) return navigator.clipboard.writeText(divTxt)
+  } else {
+    app.style.display = 'none'
   }
-    return app.style.display = 'none'
 })
 
 const convert = () => {
