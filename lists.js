@@ -766,6 +766,7 @@ const showTable = () => {
   }
   tableEmoticon.innerHTML += `<div class="row"><div class="col"><img src=${emoticonArray[i][1].img}></div><div class="col-10">${emoticonToEmoji[i]}</div></div>`;
   }
+  tableNotReady = false;
 }
 
 };
