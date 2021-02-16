@@ -16,7 +16,7 @@ const app = document.getElementById('app');
 const textArea = document.getElementById('emoji');
 
 copyCheckbox.addEventListener('click', () => {
-  if (copyCheckbox.checked === true) {navigator.clipboard.writeText(divTxt)}
+  if (copyCheckbox.checked === true) navigator.clipboard.writeText(divTxt)
 });
 
 textArea.addEventListener('keyup', () => {
