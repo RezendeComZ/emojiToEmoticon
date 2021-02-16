@@ -12,9 +12,19 @@ let divTxt = '';
 let divEmoticons = '';
 let divUnconverted = '';
 const copyCheckbox = document.getElementById('copy');
+const app = document.getElementById('app')
+const textArea = document.getElementById('emoji')
+
+textArea.addEventListener('keyup', () => {
+  if (textArea.value) {
+    convert();
+  } else {
+    app.style.display = 'none'
+  }
+})
 
 const convert = () => {
-  document.getElementById('app').style.display = 'block';
+  app.style.display = 'block';
   unconverted.style.display = 'none';
   let inputEmojis = splitter.splitGraphemes(document.getElementById('emoji').value).filter(emoji => emoji != ' ')
   divEmoticons = ''
@@ -37,3 +47,5 @@ const convert = () => {
       navigator.clipboard.writeText(divTxt)
   }
 }
+
+convert();

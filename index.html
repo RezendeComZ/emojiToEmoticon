@@ -18,39 +18,27 @@
     <div class="form-group mt-4">
       <textarea class="form-control" id="emoji" rows="4" cols="50"
         placeholder="Emoji">😇🙂😀😉♥️💔💋💲👥😛🤯🤨🤓😎⭐️🎂🍺🍸🍽🥣☕️🍕🌷🥀🥳🙁😭😤😡🙄🗣😳😮🤗🤝🤔🤐😐😴🤢👹🚹🚺👍👎🦇🐱🐶🐌🐑📷🎥🕑🖥💡📱📞✉️🏝⛈🌧🌜☂️🎵🎁⚽️✈️🚗</textarea>
-      <br>
-      <div class='d-flex'>
-        <button class="btn btn-primary d-flex align-items-center" onclick="convert()"
-          style="display: none">Convert</button>
-
-        <div class="form-group form-check d-flex align-items-center mt-2 ml-2">
-          <input type="checkbox" name="copy" id="copy" class="form-check-input" checked> <label for="copy"
-            class="form-check-label">Copy to clipboard</label>
-        </div>
-
-      </div>
-
-
     </div>
-
     <h2 id="loading">Loading scripts...</h2>
     <div id="app" style="display: none" class="mb-2">
+      <div class="form-group form-check d-flex align-items-center">
+        <input type="checkbox" name="copy" id="copy" class="form-check-input" checked> <label for="copy"
+          class="form-check-label">Copy to clipboard</label>
+      </div>
       <h4>Text:</h4>
       <div>
         <p id="resultText"></p>
       </div>
-      <h4>MSN emoticon:</h4>
+      <h4>MSN emoticons:</h4>
       <div id="resultEmoticon">
-
       </div>
       <div id="unconverted" style="display: none">
-        <h4>Not converted:</h4>
+        <h4 class="mt-2">Not converted:</h4>
         <div>
           <p id="resultUnconverted"></p>
         </div>
       </div>
     </div>
-
     <div id="accordion" class="mb-3">
       <div class="card">
         <div class="card-header" id="headingOne">
@@ -61,10 +49,8 @@
             </button>
           </h5>
         </div>
-
         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body">
-
             <div class="reference">
               <div class="emoticonToEmoji">
                 <div id="tableEmoticon">
@@ -79,15 +65,10 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
-
-
     </div>
-
-
   </div>
   <footer class="github">
     <p><a href="https://github.com/rezendecomz/emojiToEmoticon/" target="_blank">GitHub</a></p>
@@ -98,7 +79,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
-  <!-- Script emoji -->
+  <!-- Scripts emoji -->
   <script src="./grapheme-splitter.js"></script>
   <script src="./lists.js"></script>
   <script src="./emoji.js"></script>
