@@ -1746,4 +1746,3 @@ if (typeof module != 'undefined' && module.exports) {
 }
 
 document.getElementById('loading').style.display = 'none'
-document.querySelector('button').style.display = 'block'
