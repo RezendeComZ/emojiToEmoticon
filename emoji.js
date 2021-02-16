@@ -6,20 +6,20 @@
 // Emoji keyboard
 // Button 'Show side-by-side' comparison
 
-document.getElementById('loading').style.display = 'none'
+document.getElementById('loading').style.display = 'none';
 
 let divTxt = '';
 let divEmoticons = '';
 let divUnconverted = '';
 const copyCheckbox = document.getElementById('copy');
-const app = document.getElementById('app')
-const textArea = document.getElementById('emoji')
+const app = document.getElementById('app');
+const textArea = document.getElementById('emoji');
 
 copyCheckbox.addEventListener('click', () => {
   if (copyCheckbox.checked === true) {
     navigator.clipboard.writeText(divTxt)
   }
-})
+});
 
 textArea.addEventListener('keyup', () => {
   if (textArea.value) {
