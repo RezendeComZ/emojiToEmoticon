@@ -14,12 +14,22 @@ let divUnconverted = '';
 const copyCheckbox = document.getElementById('copy');
 const app = document.getElementById('app')
 const textArea = document.getElementById('emoji')
+const copyLabel = document.getElementById('copyLabel')
+
+copyCheckbox.addEventListener('click', () => {
+  if (copyCheckbox.checked === true) {
+    navigator.clipboard.writeText(divTxt)
+    console.log('copiou');
+  }
+  console.log('clicou')
+})
 
 textArea.addEventListener('keyup', () => {
   if (textArea.value) {
     convert();
     if (copyCheckbox.checked === true) {
     navigator.clipboard.writeText(divTxt)
+    console.log('copiou');
   }
   } else {
     app.style.display = 'none'
