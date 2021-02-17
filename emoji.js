@@ -24,7 +24,7 @@ copyCheckbox.addEventListener('click', () => {
 });
 
 textArea.addEventListener('keyup', () => {
-  if (textArea.value) {
+  if (textArea.value.trim()) {
     convert();
     if (copyCheckbox.checked === true) return navigator.clipboard.writeText(divTxt);
   } else {
