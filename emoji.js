@@ -6,23 +6,27 @@
 // Emoji keyboard
 // Button 'Show side-by-side' comparison
 
+function selectId(id) {
+  return document.getElementById(id)  
+};
+
 document.getElementById('loading').style.display = 'none';
 
 let divTxt = '';
 let divEmoticons = '';
 let divUnconverted = '';
-const copyCheckbox = document.getElementById('copy');
-const app = document.getElementById('app');
-const textArea = document.getElementById('emoji');
+const copyCheckbox = selectId('copy');
+const app = selectId('app');
+const textArea = selectId('emoji');
 
 copyCheckbox.addEventListener('click', () => {
-  if (copyCheckbox.checked === true) navigator.clipboard.writeText(divTxt)
+  if (copyCheckbox.checked === true) navigator.clipboard.writeText(divTxt);
 });
 
 textArea.addEventListener('keyup', () => {
   if (textArea.value) {
     convert();
-    if (copyCheckbox.checked === true) return navigator.clipboard.writeText(divTxt)
+    if (copyCheckbox.checked === true) return navigator.clipboard.writeText(divTxt);
   } else {
     app.style.display = 'none'
   }
@@ -31,7 +35,8 @@ textArea.addEventListener('keyup', () => {
 const convert = () => {
   app.style.display = 'block';
   unconverted.style.display = 'none';
-  let inputEmojis = splitter.splitGraphemes(document.getElementById('emoji').value).filter(emoji => emoji != ' ')
+  let inputEmojis = splitter.splitGraphemes(document.getElementById('emoji').value).filter(emoji => emoji != ' ');
+
   divEmoticons = ''
   divTxt = '';
   divUnconverted = '';
@@ -39,15 +44,15 @@ const convert = () => {
   inputEmojis.forEach(emoji => {
     if (emojiList[emoji] != undefined) {
       divEmoticons += `<img src=${emojiList[emoji].img}>`
-      divTxt += " " + emojiList[emoji].txt; // Test whether space is really needed
+      divTxt += " " + emojiList[emoji].txt;
     } else {
-      unconverted.style.display = 'block'
-      divUnconverted += emoji
+      unconverted.style.display = 'block';
+      divUnconverted += emoji;
     }
   });
-  document.getElementById('resultEmoticon').innerHTML = divEmoticons;
-  document.getElementById('resultText').innerText = divTxt;
-  document.getElementById('resultUnconverted').innerText = divUnconverted
+  selectId('resultEmoticon').innerHTML = divEmoticons;
+  selectId('resultText').innerText = divTxt;
+  selectId('resultUnconverted').innerText = divUnconverted
 }
 
 convert();
