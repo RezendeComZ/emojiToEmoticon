@@ -3,11 +3,12 @@
 // Separate spaces and lines
 // Separate words from convertion
 // Option to exhibit two types of some emoticons
+// Skin tone
 // Emoji keyboard
 // Button 'Show side-by-side' comparison
 
 function selectId(id) {
-  return document.getElementById(id)  
+  return document.getElementById(id)
 };
 
 document.getElementById('loading').style.display = 'none';

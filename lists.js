@@ -280,12 +280,14 @@ const emoticons = {
 
 const emojiList = {
   '😇': emoticons.angel,
+  '👼': emoticons.angel,
   '🙂': emoticons.happy,
   '🙃': emoticons.happy,
   '☺️': emoticons.happy,
   '😊': emoticons.happy,
   '🥲': emoticons.happy,
   '☺️': emoticons.happy,
+  '🤗': emoticons.happy,
   '😌': emoticons.happy,
   '😀': emoticons.teethSmile,
   '😃': emoticons.teethSmile,
@@ -296,6 +298,7 @@ const emojiList = {
   '😅': emoticons.teethSmile,
   '😂': emoticons.teethSmile,
   '🤣': emoticons.teethSmile,
+  '😺': emoticons.teethSmile,
   '🥲': emoticons.teethSmile,
   '🤠': emoticons.teethSmile,
   '🤡': emoticons.teethSmile,
@@ -315,6 +318,7 @@ const emojiList = {
   '💙': emoticons.heart,
   '💜': emoticons.heart,
   '🖤': emoticons.heart,
+  '🫶': emoticons.heart,
   '🤍': emoticons.heart,
   '🤍': emoticons.heart,
   '🤎': emoticons.heart,
@@ -327,10 +331,22 @@ const emojiList = {
   '💖': emoticons.heart,
   '💘': emoticons.heart,
   '💝': emoticons.heart,
+  '❤️‍🔥': emoticons.heart,
   '💟 ': emoticons.heart,
   '💌': emoticons.heart,
   '♡': emoticons.heart,
+  '🫀': emoticons.heart,
+  '🏩': emoticons.heart,
+  '👩‍❤️‍👩': emoticons.heart,
+  '💑': emoticons.heart,
+  '👨‍❤️‍👨': emoticons.heart,
+  '👩‍❤️‍👨': emoticons.heart,
+  '👩‍❤️‍💋‍👩': emoticons.heart,
+  '💏': emoticons.heart,
+  '👨‍❤️‍💋‍👨': emoticons.heart,
+  '👩‍❤️‍💋‍👨': emoticons.heart,
   '💔': emoticons.brokenHeart,
+  '❤️‍🩹': emoticons.brokenHeart,
   '😘': emoticons.kiss,
   '😗': emoticons.kiss,
   '😙': emoticons.kiss,
@@ -349,12 +365,19 @@ const emojiList = {
   '👅': emoticons.tongue,
   '🤨': emoticons.idk,
   '🧐': emoticons.idk,
+  '😶‍🌫️': emoticons.confused,
   '🤷‍♀️': emoticons.confused,
   '🤷‍♂️': emoticons.confused,
   '🙄': emoticons.eyeRolling,
+  '😧': emoticons.eyeRolling,
   '🤓': emoticons.nerd,
   '🥸': emoticons.nerd,
   '😎': emoticons.hot,
+  '🥸': emoticons.hot,
+  '🕶️': emoticons.hot,
+  '👓': emoticons.hot,
+  '🔍': emoticons.hot,
+  '🔎': emoticons.hot,
   '🤩': emoticons.star,
   '🌠': emoticons.star,
   '💫': emoticons.star,
@@ -425,11 +448,13 @@ const emojiList = {
   '🍹': emoticons.drink,
   '🧉': emoticons.drink,
   '🍾': emoticons.drink,
+  '🍶': emoticons.drink,
   '🥄': emoticons.plate,
   '🍴': emoticons.plate,
   '🍽': emoticons.plate,
   '🥡': emoticons.plate,
   '🥢': emoticons.plate,
+  '🍝': emoticons.plate,
   '🥣': emoticons.bowl,
   '🍵': emoticons.bowl,
   '🫖': emoticons.coffee,
@@ -437,6 +462,7 @@ const emojiList = {
   '🥤': emoticons.coffee,
   '🧋': emoticons.coffee,
   '🍶': emoticons.coffee,
+  '🥛': emoticons.coffee,
   '🍕': emoticons.pizza,
   '💐': emoticons.rose,
   '🌷': emoticons.rose,
@@ -663,14 +689,6 @@ const emojiList = {
   '👥': emoticons.messenger,
   '🚻': emoticons.messenger,
   '🫂': emoticons.messenger,
-  '👩‍❤️‍👩': emoticons.messenger,
-  '💑': emoticons.messenger,
-  '👨‍❤️‍👨': emoticons.messenger,
-  '👩‍❤️‍👨': emoticons.messenger,
-  '👩‍❤️‍💋‍👩': emoticons.messenger,
-  '💏': emoticons.messenger,
-  '👨‍❤️‍💋‍👨': emoticons.messenger,
-  '👩‍❤️‍💋‍👨': emoticons.messenger,
   '🏝': emoticons.island,
   '⛱': emoticons.island,
   '🏖': emoticons.island,
@@ -734,39 +752,26 @@ const emojiList = {
 }
 
 // Reference
-let emojiArray = Object.entries(emojiList)
-let emoticonArray = Object.entries(emoticons)
-let numEmoji = document.getElementById('numEmojis').innerText =  emojiArray.length + 1
-
-/* // Emoji: emoticon
-let emojiToEmoticon = [];
-for (let i = 0; i < emojiArray.length; i++){
-  emojiToEmoticon[i] = emojiArray[i][0] + ': ';
-  for (let j = 0; j < emoticonArray.length; j++) {
-      if (emojiArray[i][1].txt === emoticonArray[j][1].txt) {
-        emojiToEmoticon[i] += emoticonArray[j][1].txt
-      }
-  }
-}
-*/
+const emojiArray = Object.entries(emojiList)
+const emoticonArray = Object.entries(emoticons)
+const numEmoji = document.getElementById('numEmojis').innerText = emojiArray.length + 1
 
 // Emoticon: emoji
+const tableEmoticon = document.getElementById('tableEmoticon');
 let emoticonToEmoji = [];
-let tableEmoticon = document.getElementById('tableEmoticon');
 let tableNotReady = true;
 
 const showTable = () => {
   if (tableNotReady) {
     for (let i = 0; i < emoticonArray.length; i++) {
-  emoticonToEmoji[i] = ''
-  for (let j = 0; j < emojiArray.length; j++) {
-    if (emoticonArray[i][1].txt == emojiArray[j][1].txt) {
-      emoticonToEmoji[i] += emojiArray[j][0]
+      emoticonToEmoji[i] = ''
+      for (let j = 0; j < emojiArray.length; j++) {
+        if (emoticonArray[i][1].txt == emojiArray[j][1].txt) {
+          emoticonToEmoji[i] += emojiArray[j][0]
+        }
+      }
+      tableEmoticon.innerHTML += `<div class="row"><div class="col"><img src=${emoticonArray[i][1].img}></div><div class="col-10 spacing">${emoticonToEmoji[i]}</div></div>`;
     }
+    tableNotReady = false;
   }
-  tableEmoticon.innerHTML += `<div class="row"><div class="col"><img src=${emoticonArray[i][1].img}></div><div class="col-10 spacing">${emoticonToEmoji[i]}</div></div>`;
-  }
-  tableNotReady = false;
-}
-
 };
