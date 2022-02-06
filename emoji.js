@@ -20,19 +20,6 @@ const copyCheckbox = selectId('copy');
 const app = selectId('app');
 const textArea = selectId('emoji');
 
-copyCheckbox.addEventListener('click', () => {
-  if (copyCheckbox.checked === true) navigator.clipboard.writeText(divTxt);
-});
-
-textArea.addEventListener('keyup', () => {
-  if (textArea.value.trim()) {
-    convert();
-    if (copyCheckbox.checked === true) return navigator.clipboard.writeText(divTxt);
-  } else {
-    app.style.display = 'none'
-  }
-})
-
 const convert = () => {
   app.style.display = 'block';
   unconverted.style.display = 'none';
@@ -55,5 +42,18 @@ const convert = () => {
   selectId('resultText').innerText = divTxt;
   selectId('resultUnconverted').innerText = divUnconverted
 }
+
+copyCheckbox.addEventListener('click', () => {
+  if (copyCheckbox.checked === true) navigator.clipboard.writeText(divTxt);
+});
+
+textArea.addEventListener('keyup', () => {
+  if (textArea.value.trim()) {
+    convert();
+    if (copyCheckbox.checked === true) return navigator.clipboard.writeText(divTxt);
+  } else {
+    app.style.display = 'none'
+  }
+})
 
 convert();
